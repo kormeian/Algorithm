@@ -8,7 +8,8 @@ class Solution {
             list.add(new ArrayList<Integer>());
         }
         int a, b;
-        for(int[] node:edge){
+        
+        for(int[] node : edge){
             a=node[0];
             b=node[1];
             list.get(a).add(b);
