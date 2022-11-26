@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -25,7 +26,7 @@ class Main {
 			}
 		}
 
-		Queue<Integer> q = new PriorityQueue<>();
+		ArrayDeque<Integer> q = new ArrayDeque<>();
 		boolean[] visited;
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < N; i++) {
