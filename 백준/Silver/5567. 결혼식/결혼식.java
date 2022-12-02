@@ -17,7 +17,6 @@ public class Main {
 			myFriends[a][b] = true;
 			myFriends[b][a] = true;
 		}
-		boolean[] guest = new boolean[n + 1];
 		boolean[] visited = new boolean[n + 1];
 		visited[1] = true;
 		int answer = 0;
