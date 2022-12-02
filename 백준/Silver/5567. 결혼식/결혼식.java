@@ -18,22 +18,24 @@ public class Main {
 			myFriends[b][a] = true;
 		}
 		boolean[] guest = new boolean[n + 1];
+		boolean[] visited = new boolean[n + 1];
+		visited[1] = true;
+		int answer = 0;
 		for (int i = 2; i < n + 1; i++) {
 			if (myFriends[1][i]) {
-				guest[i] = true;
+				if (!visited[i]) {
+					visited[i] = true;
+					answer++;
+				}
 				for (int j = 2; j < n + 1; j++) {
-					if (i != j && myFriends[i][j]) {
-						guest[j] = true;
+					if (i != j && myFriends[i][j] && !visited[j]) {
+						visited[j] = true;
+						answer++;
 					}
 				}
 			}
 		}
-		int answer = 0;
-		for (int i = 2; i < n + 1; i++) {
-			if (guest[i]) {
-				answer++;
-			}
-		}
 		System.out.println(answer);
+		br.close();
 	}
 }
